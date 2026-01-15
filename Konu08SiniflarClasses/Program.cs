@@ -1,4 +1,6 @@
-﻿namespace Konu08SiniflarClasses
+﻿using System.Security.Cryptography;
+
+namespace Konu08SiniflarClasses
 {
     internal class Ev // sinif tanimlama
     {
@@ -97,7 +99,47 @@
                     Console.WriteLine("giris basarisiz");
                 }
             #endregion
+                #region ornek3
+                Araba araba = new()
+                {
+                    Id = 1,
+                    Marka = "volvo",
+                    KasaTipi = "suv",
+                    Model = "xc90",
+                    Renk = "kirmizi",
+                    ModelYili = 2025
+                };
 
+
+                Araba araba2 = new()
+                {
+                    Id = 2,
+                    Marka = "audi",
+                    KasaTipi = "sedan",
+                    Model = "A5quadro",
+                    Renk = "mavi",
+                    ModelYili = 2023
+                };
+                #endregion
+
+                #region Ornek 4
+                Kategori kategori = new()
+                {
+                    Id = 3, KategoriAdi = "Elektronik"
+                };
+                Kategori kategori2 = new()
+                {
+                    Id = 4, KategoriAdi = "Bilgisayar"
+                };
+                Kategori Kategori3 = new Kategori()
+                {
+                    Id = 5, KategoriAdi = "telefon"
+                };
+                Console.WriteLine();
+
+                Console.WriteLine($"Anasayfa Hakkimizda {kategori.KategoriAdi}{kategori2.KategoriAdi}{Kategori3.KategoriAdi} iletisim");
+
+                #endregion
 
             }
         }
@@ -116,11 +158,11 @@
             internal int Id;
             internal string Marka;
             internal string Model;
-            internal string KasaTip;
+            internal string KasaTipi;
             internal string yakitTip;
             internal string VitesTipi;
             internal string Renk;
-            internal string ModelYili;
+            internal int ModelYili;
 
         }
 
