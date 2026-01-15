@@ -14,17 +14,17 @@ namespace Konu08SiniflarClasses
             Console.WriteLine(kurucuMetot);
             Console.WriteLine();
         }
-        public bool LoginKontrol(string kullaniciAdi , string sifre)
+        public bool LoginKontrol(string kullaniciAdi, string sifre)
         {
-            if(kullaniciAdi=="admin" && sifre == "adm123")
+            if (kullaniciAdi == "admin" && sifre == "adm123")
             {
                 return true;
             }
             return false;
         }
-        public int ToplamaYap (int sayi1, int sayi2)
+        public int ToplamaYap(int sayi1, int sayi2)
         {
-            return sayi1 + sayi2; 
+            return sayi1 + sayi2;
         }
 
     }
