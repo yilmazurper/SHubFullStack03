@@ -26,6 +26,8 @@ namespace Konu08SiniflarClasses
         {
             return sayi1 + sayi2;
         }
+        public static string statikdegisken = "sinifta statik degisken kullanimi";
+        public string dinamikdegisken = "dinamik degisken";
 
     }
 }

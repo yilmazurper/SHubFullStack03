@@ -5,6 +5,7 @@
   <Project Path="Konu06Diziler/Konu06Diziler.csproj" Id="66b95c88-752c-4f05-9684-d6da5b5e8d11" />
   <Project Path="Konu07Donguler/Konu07Donguler.csproj" Id="1706e800-c278-4f8f-82bb-a60649cadab4" />
   <Project Path="Konu08SiniflarClasses/Konu08SiniflarClasses.csproj" Id="e80f4874-8c67-48d9-90e3-1d6ab8ea8e73" />
+  <Project Path="Konu09StructYapilar/Konu09StructYapilar.csproj" Id="321fe89a-a26a-4e11-86d5-a66fd5fe0ede" />
   <Project Path="KonuMetodlar/Konu05Metodlar.csproj" Id="b97c9fc3-0326-4f26-a245-dfffd0f393d2" />
   <Project Path="Shubfullstack3/Konu01Degiskenler.csproj" />
 </Solution>

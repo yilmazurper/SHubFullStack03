@@ -99,7 +99,7 @@ namespace Konu08SiniflarClasses
                     Console.WriteLine("giris basarisiz");
                 }
             #endregion
-                #region ornek3
+            #region ornek3
                 Araba araba = new()
                 {
                     Id = 1,
@@ -122,7 +122,7 @@ namespace Konu08SiniflarClasses
                 };
                 #endregion
 
-                #region Ornek 4
+            #region Ornek 4
                 Kategori kategori = new()
                 {
                     Id = 3, KategoriAdi = "Elektronik"
@@ -138,6 +138,48 @@ namespace Konu08SiniflarClasses
                 Console.WriteLine();
 
                 Console.WriteLine($"Anasayfa Hakkimizda {kategori.KategoriAdi}{kategori2.KategoriAdi}{Kategori3.KategoriAdi} iletisim");
+
+                #endregion
+                #region Ornek 5
+                SiniftaMEtotKullanimi metotkulallinimi = new(); //snifmethotkullanimi classindan metot kullanimi adinda bir nesne olusturduk 
+                var sonuc = metotkulallinimi.LoginKontrol(kullaniciAdi , sifre); //metot kullanimi nesnesinden iicndeki loginkontrol metotduna
+                                                                           //istedigi perarametreleri verek oradan donecek boll degeri sonuc degiskenine atadik
+                if (sonuc==true) // eger sonuc degiskenine gelen deger true is
+                {
+                    Console.WriteLine("giris Basarili");
+                    Console.WriteLine("hosgeldin Kral");
+                }
+                else //sonuc degisken degeri false ise
+                    Console.WriteLine("giris basarisiz");
+
+                var toplamasonucu = metotkulallinimi.ToplamaYap(10, 8);
+                Console.WriteLine("toplama sonucu:" + toplamasonucu);
+
+                Console.WriteLine();
+
+                Console.WriteLine("sttaik degisken:" + SiniftaMEtotKullanimi.statikdegisken); //statik degiskenin degerine ulasmak icin direk sinifladi
+                //satatik degisken adi sekline ulasiyoruz
+                Console.WriteLine("dinamik degisken" + metotkulallinimi.dinamikdegisken);
+
+
+                #endregion
+                #region ornek6
+                user user = new user()
+                {
+                    id = 1 ,
+                    CreateDate = DateTime.Now,
+                    name = "test",
+                    email = "test@deneme.com",
+                    password = sifre,
+                    phone="test",
+                    username = kullaniciAdi
+                };
+
+                Console.WriteLine();
+
+                bool kullanicigirissonuc  = user.KullaniciGiris(user.username, user.password);
+
+                Console.WriteLine("kullanici giris sonuc: " + kullanicigirissonuc);
 
                 #endregion
 
