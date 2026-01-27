@@ -101,6 +101,7 @@ namespace Konu10StringSinifi
             foreach (var item in sehirlerArray)
             {
                 Console.WriteLine("sehir: " + item);
+
             }
 
 
