@@ -40,6 +40,12 @@
     }
     internal class Program
     {
+        public static int Id { get; private set; }
+        public static string Name { get; private set; }
+        public static bool IsActive { get; private set; }
+        public static bool Isactive { get; private set; }
+        public static int Price { get; private set; }
+
         static void Main(string[] args)
         {
             Console.WriteLine("Konu 14 Interfaces-Arayuzler");
@@ -49,6 +55,35 @@
             arayuz.Topla();
             arayuz.Goster();
             Console.WriteLine("toplama sonucu :" + arayuz.ToplamaYap());
+
+
+            Console.WriteLine();
+
+            Kategori kategori = new Kategori()
+            {
+                Id = 1,
+                Name = "Elektronik",
+                IsActive = true,
+            };
+            
+                    Console.WriteLine();
+
+
+                Urun urun = new Urun()
+                {
+                    Id = 1,
+                    Name = "iphone cift sim cep telefonu",
+                    IsActive = true,
+                    Price = 18000,
+                };
+
+                Console.WriteLine("urun bilgileri:");
+                Console.WriteLine(urun.Name);
+                Console.WriteLine(urun.Price+ "TL");
+                    
+          
+
+
         }
     }
 }
