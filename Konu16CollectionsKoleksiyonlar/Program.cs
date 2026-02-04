@@ -245,6 +245,7 @@ namespace Konu16CollectionsKoleksiyonlar
             }
             Console.WriteLine();
             Console.WriteLine("listedeki kayit sayisi : " + kullanicilar.Count); // count listedeki eleman sayisini getirir,
+
         }
 	
     }
