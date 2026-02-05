@@ -19,6 +19,11 @@ namespace WindowsFormsEgitimi
         private void Form1_Load(object sender, EventArgs e)
         {
             //bu metot acilirken calisir
+            for (int i = 0; i < 50; i++)
+            {
+                domainUpDown1.Items.Add(FontFamily.Families[i].Name);
+            }
+            comboBox1.DataSource = domainUpDown1.Items;
         }
 
         
@@ -40,5 +45,32 @@ namespace WindowsFormsEgitimi
             button1.Text = "Butona Tiklandi";
 
         }
+
+        private void maskedTextBox1_MaskInputRejected(object sender, MaskInputRejectedEventArgs e)
+        {
+
+        }
+
+        private void btngiris_Click(object sender, EventArgs e)
+        {
+            if (txtkullanici.Text == "Admin" && txtsifre.Text=="adm123")
+            {
+                label1.Text = "Hosgeldin Kral"; //label1 'e bunu yazdir
+                groupBox1.Visible = false; //KULLANICI GIRIS FORMUNU GIZLE
+            }
+            else
+            {
+                MessageBox.Show("Giris Basarisiz"); // kisayolu mbox olan tab: ekrana mesaj vermemizi saglar
+                groupBox1.Visible = false;
+
+            }
+        }
+
+        private void numericUpDown1_ValueChanged(object sender, EventArgs e) // ekrandaki numericupdown1 iismli nesenin degeri degistiginde calisacak olan metot
+        {
+            label1.Font= new Font(comboBox1.SelectedValue.ToString(), (float)numericUpDown1.Value); //ekranda labrl1 isimli elemanin nesnenin font degerini yeni fontla degistir. yeni fontu yine ekranda icine sistemdeki fontlari yuklwdigimiz combobox1 isimli nesnede secili olan fontu kullan, 2. parametrede ise bu yazi fontunun boyutunu numeric updown1 nesnesindeki secilen degerden alarak ayarla dedik 
+        }
+
+      
     }
 }
