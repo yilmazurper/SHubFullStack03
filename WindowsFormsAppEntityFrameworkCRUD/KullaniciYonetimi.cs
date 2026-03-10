@@ -18,6 +18,8 @@ namespace WindowsFormsAppEntityFrameworkCRUD
             InitializeComponent();
         }
         DatabaseContext context = new DatabaseContext();
+        private object dgvKategoriler;
+
         void Yukle()
         {
             dgvKullanicilar.DataSource = context.Users.ToList();
@@ -102,7 +104,20 @@ namespace WindowsFormsAppEntityFrameworkCRUD
 
         private void btnSil_Click(object sender, EventArgs e)
         {
-
+            var Id = (int)dgvKullanicilar.CurrentRow.Cells["Id"].Value;//secilen kydin id'si
+            var kayit = context.Users.Find(Id); //db'den kaydi bul
+            context.Users.Remove(kayit); //kaydi silincek olarak isaretle
+            //degisikleri db'ye isle
+            var sonuc = context.SaveChanges();
+            if (sonuc > 0)
+            {
+                Yukle();
+                MessageBox.Show("Kayit silme Basarili");
+            }
+            else
+            {
+                MessageBox.Show("Kayit silme Basarisiz");
+            }
         }
     }
 }

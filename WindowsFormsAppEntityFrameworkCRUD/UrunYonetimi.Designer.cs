@@ -54,6 +54,7 @@
             this.dgvUrunler.Name = "dgvUrunler";
             this.dgvUrunler.Size = new System.Drawing.Size(1087, 310);
             this.dgvUrunler.TabIndex = 1;
+            this.dgvUrunler.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvUrunler_CellClick);
             // 
             // groupBox1
             // 
@@ -87,6 +88,7 @@
             this.btnSil.TabIndex = 5;
             this.btnSil.Text = "Sil";
             this.btnSil.UseVisualStyleBackColor = false;
+            this.btnSil.Click += new System.EventHandler(this.btnSil_Click);
             // 
             // btnGuncelle
             // 
@@ -98,6 +100,7 @@
             this.btnGuncelle.TabIndex = 5;
             this.btnGuncelle.Text = "Guncelle";
             this.btnGuncelle.UseVisualStyleBackColor = false;
+            this.btnGuncelle.Click += new System.EventHandler(this.btnGuncelle_Click);
             // 
             // btnEKle
             // 
@@ -108,6 +111,7 @@
             this.btnEKle.TabIndex = 5;
             this.btnEKle.Text = "Ekle";
             this.btnEKle.UseVisualStyleBackColor = false;
+            this.btnEKle.Click += new System.EventHandler(this.btnEKle_Click);
             // 
             // txtAciklama
             // 
