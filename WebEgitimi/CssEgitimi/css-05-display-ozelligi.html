@@ -1,0 +1,178 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>css-05-display-ozelligi</title>
+</head>
+<body>
+    <h1>css-05-display-ozelligi</h1>
+    <p>
+        html elemntleriin display ozelligi
+    </p>
+    <span style="1px solid">span elementi display inline dir</span>
+    <span style="1px solid">bu yuzden spanlar yanyana dizilir</span>
+
+    <ul>
+        <li>anasayfa</li>
+        <li>hakkmizda</li>
+        <li>iletisim</li>
+    </ul>
+
+    <h2>display ozelligi block olan elementler</h2>
+    <div>
+        body<br />
+        div<br />
+        h1-h6 <br />
+        p <br />
+        form <br />
+        header <br />
+        footer <br />
+        section <br />
+        ul
+    </div>
+    <h3>dispaly ozelligi inline olan elementler</h3>
+    <div>
+        span , a, img
+        <br />
+        <span>bu span icerigidir</span>
+        <a href="#">a elemnti</a>
+        <img src="Alternate Text" />
+    </div>
+
+    <h3>elemntlerin display ozelligini degistirme</h3>
+    <p style="display:inline; border:1px solid">
+        p elementi display:inline ile span gibi davranabilir
+    </p>
+    <h3 style="display:inline-block; border:1px solid">
+        h3 style display:inline-block da kullanbiliriz
+    </h3>
+    <span style="display:block; background-color: aquamarine;">
+       span elemntiinin display ozelligi block yapildi
+    </span>
+
+    <hr />
+
+    <h3>display ile element gizleme veya gosterme</h3>
+    <div style="display:none">
+        style="display:none" ile elementi sayfada gizleyebiliriz
+    </div>
+
+    <h3>visibility ile element gizleme</h3>
+    <div style="visibility:hidden">
+        style:"visibility:hidden" ile elemnti sayfada gizelyebilriz
+    </div>
+    <div>
+        visibility:hidden ile gizeledigimiz elemntin alani ekranda korunur
+    </div>
+
+    <hr />
+
+    <h2>dispaly Flex</h2>
+    <p>
+        display ozelligi flex olan elemntl;er , icindeki elementleri esnek bir sekilde duzenler. flexbax, ozellikle responsice tasarimlar icin oldukca kulanislidir
+    </p>
+
+    <div style=" display:flex">
+        bir elemente style="display:flex"veta style=inline-f;ex ozelligi verilerek esnek hale getirilir
+    </div>
+    <div id="flexDiv">
+        <div>1</div>
+        <div>2</div>
+        <div>3</div>
+        <div>4</div>
+        <div class="item5">5</div>
+        <div class="item6">6</div>
+        <div>7</div>
+        <div>8</div>
+        <div>9</div>
+    </div>
+    <style>
+        #flexDiv{display:flex; width: 300px; border: 1px solid black}
+        #flexDiv div {background-color:lightblue; border:1px solid blue; margin:5px; padding:10px;}
+    </style>
+
+    <h4>flex-wrap ozelligi</h4>
+    <p>
+        kapsayici elemnte sigmayan icerik;erin alt satirdan devam etmesi saglar
+    </p>
+    <style>
+        #flexDiv{flex-wrap:wrap;}
+    </style>
+
+    <h3>flex-direction</h3>
+    <p>
+        ogelerin yonunu blerilemizi saglar.yatay veya dikey olarak yerlesmasini ayarlayabiliriz
+    </p>
+    <style>
+        #flexDiv { flex-direction:column; /*varsayilan row*/}
+    </style>
+
+    <h3>Align-Content</h3>
+    <p>
+        cok satirli yapilarda ogelrin dikey eksende izasina ayarlar
+    </p>
+    <p>
+        kullanimi icin kapsayici ogeye strech,
+        flex-start: basa hizala,
+        flex-end:sona hizala,
+        center:merkeze hizala,
+        space-between: ve space-evenly ile arakli hizalama yapabiliriz
+    </p>
+    <style>
+        #flexDiv{max-width: 700px ; min-height: 350px ; flex-direction: row; align-content: center; }
+    </style>
+    <h3>Justify content</h3>
+    <p>
+        ogelerin yatay eksende hozalanmasini saglar
+        <br />
+        kullanimi icinkapsayici ogeye justify-content: space-evenly ,center ,flex-start,flex-end; space-around , space-between ,, seklinde kod uygulanir
+    </p>
+    <style>
+        #flexDiv{justify-content:space-evenly; }
+        #flexDiv div {width: 30px; }
+    </style>
+
+    <h3>order ozelligi ile elemanlara siralma</h3>
+    <i>
+        siralama ozelligi uygulaann elemanlar sadece kendi aralainda sialnir
+    </i>
+    <style>
+        .item5 {order : 6 }
+
+        .item6 {order : 5 }
+    </style>
+    <h3>flex grow</h3>
+    <p>bir ogeyi digerleine gore daha buyuk gostermek icin kullanilir
+    </p>
+    <style>
+        .item5 { flex-grow: 2 }
+
+        .item6 { flex-grow: 5 }
+    </style>
+
+    <h3>flex shrink</h3>
+    <p>
+        bir ogeyi dierlerine gore daha kucuk gostmrek icin kullanilir
+    </p>
+    <style>
+        #flexDiv div:first-child { flex-shrink: 2 }
+        #flexDiv div:last-child child { flex-shrink: 2 }
+
+    </style>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    </body>
+</html>

@@ -1,0 +1,115 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>Cssvposition ile konumlandirma</title>
+</head>
+<body>
+    <h3>css position ile konumlandirma</h3>
+    <p>
+        html elemnlerini ekranda konumlandimak icin kullanilir
+    </p>
+    <h2>position ozellikleri</h2>
+    <ol>
+        <li>
+            static: varsayilan deger ,  eleman yerinde konumlanir
+        </li>
+
+        <li>
+            relative: goreeli
+        </li>
+
+        <li>
+            fixed: istenilen noktaya sabitlenir
+        </li>
+
+        <li>
+            absolute: mutlak
+        </li>
+
+        <li>
+            stick:yapiskan
+        </li>
+
+    </ol>
+
+
+    <hr />
+
+    <h3>positon-relative</h3>
+    <div style="position:relative; height:350px; border: 1px solid">
+        <p>
+            position:relative olan oge 4 konumdan etkilenir , sol, sag, alt,ust
+        </p>
+        <div style="positon:relative; width:180px; height:180px; border:1px solid; left:118px:">
+            positon:relative:reletive olan div
+        </div>
+
+
+
+    </div>
+
+    <h3>position: fixed</h3>
+    <p>
+        elementin sayfada hep ayni kouda klamaisni saglar
+    </p>
+    <div style="position:fixed; bottom:1rem; right:1rem; width:25px; background-color:blue; text-align:center;">
+        <a href="#" style="color:white">/\</a>
+    </div>
+
+    <hr />
+    <h3>position:absolute</h3>
+    <p>
+        elemnelerin mutlaka o konumda olmasi gerektiginde kullanilir . yerini diger elemntlere gore ayarlar
+    </p>
+    <div style="positon:relative; border:1px solid; min-height:180px:">
+        kapsayici div e mutklaka postion relative veriyoruz
+        <div style="absolute; bottom:1.8rem; right:2.5rem; background-color: blue; color:white; text-align:center;">
+            positon:absolute
+
+        </div>
+    </div>
+
+
+
+    <hr />
+
+    <h3>positon sticky</h3>
+    <p>
+        kullanicin kaydirma konumuna gore oge konumlandirmamizi saglar
+    </p>
+
+    <div style="position:sticky; top:0; padding:5px; background-color:aquamarine; border:2px inset red">
+        positon:sticky
+    </div>
+    <div style="min-height:900px">
+        positon:sticky den sonraki icerik
+    </div>
+
+    <hr />
+
+    <h3>ogelerin cakisma durumu</h3>
+    <p>
+        web uygilamalrinda postion kullnaiminda bazaen ogerler ust uste biner
+    </p>
+
+    <div style="position:relative; width:300px; height:300px; border:3px outset">
+
+        <div style="position:absolute; top:70px; right:1rem; border:5px outset yellow; background-color:green; z-index:;">
+            1.div
+        </div>
+
+    </div>
+
+    <div style="position:relative; width:300px; height:300px; border:3px outset">
+
+        <div style="position:absolute; top:90px; right:1rem; border:5px outset yellow; background-color:green; z-index:;">
+            2.div
+
+          
+        </div>
+
+    </div>
+
+</body>
+</html>
