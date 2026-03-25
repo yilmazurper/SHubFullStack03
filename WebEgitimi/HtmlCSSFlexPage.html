@@ -4,9 +4,10 @@
     <meta charset="utf-8" />
     <title>Html Web Site Örneği</title>
     <style>
-        #ustSerit div {
-            float: left;
-            width: 33%;
+        #ustSerit { 
+            display:flex; 
+            justify-content:space-between;
+            align-items:center;
         }
 
         #ustMenu div {
@@ -18,15 +19,18 @@
             clear: both;
             text-align: center;
         }
+        .urunler{
+            display:flex; 
+        }
 
         .urunler div {
-            float: left;
-            max-width: 30%;
+            
+            
             padding: 18px 18px 10px 0;
         }
 
         .urunler img {
-            max-width: 33%;
+            max-width: 100%;
         }
 
         header, main, footer, .container {
@@ -35,8 +39,8 @@
             clear: both;
         }
 
-        .row div {
-            float: left;
+        .row  {
+            display:flex; justify-content:space-between; margin:auto; clear:both;
         }
 
         a {

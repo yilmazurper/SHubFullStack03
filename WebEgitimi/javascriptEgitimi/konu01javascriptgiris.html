@@ -1,0 +1,87 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>konu01 javascript giris</title>
+</head>
+<body>
+    <h1>konu01 javascript giris</h1>
+    <p>
+        javascript tarayicilar izerinde calaiasbilen bir progalamma dilidir
+    </p>
+    <p>
+        java ile javascript fakli progrlama dilidir
+    </p>
+    <p>
+        javascript i web sayfalarinin herhengi bir yeirnde script taglarini acarak yazabiliriz
+    </p>
+    <script>
+        //jstek satir yorum
+      
+       // js coklu
+      // yorum satiri
+        
+        document.write("bu yazi javascript ile ekrana yazdirilidi"); //js ile ekrana metin yazdirma
+        document.writeln("<h3>bu yazi javascript ile ekrana yazdiirldi</h3>"); //js ile ekrana metin yazdirma
+
+
+        console.log("bu yazi console.log metotuyla tarayici konsoluna gonderildi.");
+        console.error("konsola hata mesaji yazdimak icin kullanabilriiz");
+        console.warn("konsola uyari mesaji yadimrk icin kullanabiliriz");
+
+
+        //javascrip ile degiken tanimla
+        // js de degisken tipleri : Any,number,string,undefined
+        var urunAdi, marka = "monster";
+        var urunFiyati = 58000, kdv = 20;
+
+        console.log("urun adi:", urunAdi);
+        console.log("urun Marka:", marka);
+        console.log("urun fiyati:", urunAdi);
+        console.log("urun kdv:", kdv);
+
+        //LET ILE DEGISKEN TANIMLAMA
+        //console.warn("meslek:" meslek); //meslek degiskenine burda henuz tanimlamadigimiz icin undefined geliyor
+
+        let isim; let soyisim; let meslek;
+        isim = "murat"; soyisim = "yilmaz"; meslek = "kaldirim muhendisi"
+
+        console.log("kisi bilgileri :", isim + "" + soyisim);
+        console.warn("meslek:", meslek);
+
+
+        //javascipte sabitler
+        //tanimlandiktan sonra degistirlmmesi gereken degerler icin 
+        const sabitDeger = "bu veri sabittir, degistirlimes , degisitilemsi teklif dahi edilemez!!"
+        const yeniTRkdv = 20;
+
+        console warn("sabbitDeger : ", sabitDeger);
+
+        //sabitDeger ="sabit Deger"; uncaught:assigmenbt to constant variable
+    </script>
+
+    <h3>Javascriptye de nesneler</h3>
+    <p> 
+    C# taki snifilardan olusturumuz nesne yapinisa benzer
+    </p>
+
+    <script>
+        let araba = { marka: BMW, model: "320x", yil: "2023", renk: "kirmizi" } //ornek nesne tanimlanmsi
+        var kisi = { adi: "alp", soyadi: "arslan", yas: "18", mesle: "issiz" } //let veya var ile nesne tanimlayabiliriz
+
+        console.log("araba:", araba);
+        console.log("kisi", kisi);
+
+        console.log("araba marka", araba.marka);
+        console.log("kisi ad soyad", kisi.adi + "" + kisi.soyadi);
+
+
+
+    </script>
+
+
+
+
+
+</body>
+</html>
