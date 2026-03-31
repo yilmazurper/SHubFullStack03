@@ -14,9 +14,9 @@
         let sayi1 = 10;
         let sayi2 = 8;
         console.error("sayi 1 :" + sayi1 + "sayi 2:" + sayi2);
-        console.log("sayi 1+sayi 2=", sayi1 + sayi2);
-        console.log("sayi 1+sayi 2=" + sayi1 + sayi2); //burada string degerler sayisal degeri birlstityor
-        console.log("sayi(sayi1+sayi2)=" + (sayi1 + sayi2)); //bilestirmeyi engellmek icin
+        console.log("sayi 1 + sayi 2=", sayi1 + sayi2);
+        console.log("sayi 1 + sayi 2=" + sayi1 + sayi2); //burada string degerler sayisal degeri birlstityor
+        console.log("sayi(sayi1 + sayi2)=" + (sayi1 + sayi2)); //bilestirmeyi engellmek icin
 
         console.log("sayi 1- sayi 2=", sayi1 - sayi2);
         console.log("sayi 1*sayi 2=", sayi1 * sayi2);
@@ -24,6 +24,64 @@
         console.log("sayi 1 % sayi 2=", sayi1 % sayi2);
 
     </script>
+
+    <h2>atama operatorleri</h2>
+
+    <p>= , += , /= , %= ,</p>
+
+    <script>
+        console.warn("Atama opertatorleri");
+
+        console.error("sayi 1 : " + sayi1 + "- sayi 2" + sayi2);
+
+        console.log("sayi 1 += sayi 2:", sayi1 += sayi2);
+        console.log("sayi 1 -= sayi 2:", sayi1 -= sayi2);
+        console.log("sayi 1 *= sayi 2:", sayi1 *= sayi2);
+        console.log("sayi 1 /= sayi 2:", sayi1 /= sayi2);
+        console.log("sayi 1 %= sayi 2:", sayi1 %= sayi2);
+
+    </script>
+    <h2>karsilastirma operatirleri</h2>
+    <p>
+        == esit mi , === degerler ve veri tioleri esit mi, !=esit degilse, !== degerler ve tipler esit degilse , > buyuktur , < kucuktur , >= buyuk veya esitse , <= kucuk veya esitse 
+    </p>
+    <script>
+        console.warn("karsilastirma operatorleri");
+
+        console.error("sayi 1:" + sayi1 + " sayi 2:" + sayi2);
+
+        console.log("sayi 1 == sayi 2 : ", sayi1 == sayi2);
+        console.log("sayi 1 === sayi 2 : ", sayi1 === sayi2);
+        console.log("sayi 1 != sayi 2 : ", sayi1 != sayi2);
+        console.log("sayi 1 !=== sayi 2 : ", sayi1 !== sayi2);
+        console.log("sayi 1 > sayi 2 : ", sayi1 > sayi2);
+        console.log("sayi 1 < sayi 2 : ", sayi1 < sayi2);
+        console.log("sayi 1 <= sayi 2 : ", sayi1 <= sayi2);
+        console.log("sayi 1 >= sayi 2 : ", sayi1 >= sayi2);
+
+    </script>
+
+    <h2>mantiksal operratorler</h2>
+    <p>
+        && and ( ve) operatoru - || or (veya) operatoru
+    </p>
+    <script>
+        console.log();
+        console.warn("mantiksal operatoler");
+
+        console.error("sayi 1 : " + sayi1 "-sayi 2" + sayi2);
+
+        console.log("sayi 1< sayi 2 && sayi1==sayi2 :", sayi1 < sayi2 && sayi1 == sayi2);
+
+        console.log("sayi 1< sayi 2 || sayi1==sayi2 :", sayi1 < sayi2 || sayi1 == sayi2);
+
+       
+
+
+
+    </script>
+
+
 
 
 </body>

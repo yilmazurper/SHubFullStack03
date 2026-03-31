@@ -81,6 +81,12 @@
     <Content Include="index.html" />
     <Content Include="javascriptEgitimi\konu01javascriptgiris.html" />
     <Content Include="javascriptEgitimi\konu02operatorler.html" />
+    <Content Include="javascriptEgitimi\Konu03KararYapilari.html" />
+    <Content Include="javascriptEgitimi\Konu04Donguler.html" />
+    <Content Include="javascriptEgitimi\Konu05Fonksiyonlar.html" />
+    <Content Include="javascriptEgitimi\Konu06StringMetotlari.html" />
+    <Content Include="javascriptEgitimi\KOnu07olaylar.html" />
+    <Content Include="javascriptEgitimi\Konu08Diziler.html" />
     <Content Include="Resimler\Screenshot %282%29.png" />
     <Content Include="Stil.css" />
     <Content Include="Web.config" />

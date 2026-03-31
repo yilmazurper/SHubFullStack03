@@ -1,0 +1,59 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>Konu05Fonksiyonlar</title>
+</head>
+<body>
+    <h1>Konu05 Fonksiyonlar</h1>
+    <script>
+        function myfunction(params) {
+            console.log("fonksiyona gonderilen parametre: ", params);
+        }
+
+        myfunction("fonksiyona gonderilen deger");
+        myfunction(18);
+        myfunction(true);
+
+
+        //ornek2
+        function ToplamaYap(sayi1, sayi2) {
+            console.log("toplam:", sayi1 + sayi2);
+        }
+        ToplamaYap(10, 8);
+        ToplamaYap(50, 8);
+        ToplamaYap(30, 4);
+
+
+        console.warn("geriye deger donduren fonskyonlar:");
+        function cikarmaYap(sayi1, sayi2) {
+            return sayi1 - sayi2;
+        }
+        console.log("toplam:", cikarmaYap(10, 8));
+        console.log("toplam:", cikarmaYap(50, 8));
+        console.log("toplam:", cikarmaYap(30, 4));
+
+        console.warn("sayfa arkaplan ve yazi degistirme:");
+
+        function renkDegistir(arkaplanRengi, yaziRengi) {
+            document.bgColor = arkaplanRengi
+            document.fgColor = yaziRengi
+
+        }
+        //renkDegistir("red", "white")
+        renkDegistir("black", "white")
+
+
+
+        console.warn("hazir gelen diger ozellikler");
+        console.log("pencere ic yuksekligi: ", window.innerHeight);
+        console.log("pencere ic genisligi: ", window.innerwidth);
+
+        console.log("pencere dis yuksekligi: ", window.outerHeight);
+        console.log("pencere dis yuksekligi: ", window.outerHeight);
+
+
+    </script>
+
+</body>
+</html>
