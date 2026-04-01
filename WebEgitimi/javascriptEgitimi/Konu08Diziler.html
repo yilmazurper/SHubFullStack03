@@ -17,14 +17,60 @@
         document.write("toplam degeri" + toplam + "<hr>")
 
 
-        for (var i of sayilar) {
+        for (var i of sayilar)
+        {
             document.write("i nin degeri " + i , "<br>")
         }
+
         document.write("<br>")
 
+        var arabalar = ["fiat", "peugeot", "togg"]
+        console.log(arabalar)
+        document.write("<h3>markalar: </h3>")
+        for (var marka of arabalar)
+        {
+            document.write(marka, "<br>")
+        }
+        
+        document.write("<br>")
+
+        arabalar.push("tesla", "opel", "audi") //dizinin sonununa deger ekleme
+        arabalar.unshift("bmw") // dizinin basina deger ekleme
+        arabalar[7] = "ferrari" //beliritlen indexe ekleme
+        arabalar[0] = "mercedes" //indexte deger varsa gunclle
+        arabalar.splice(2, 0, "bugatti", "bmw") // baslangic indexi , silinicek elamn sayisi, eklencek lemenlar
+
+        console.log(arabalar);
+        
+        document.write("<h3>markalar: </h3>")
+        for (var marka of arabalar) {
+            document.write(marka, "<br>")
+        }
+
+        document.write("<br>")
+
+
+        let arac = arabalar[2]
+        document.write("<br><br> secilen arac:" + arac)
+        console.log(arac);
+
+        var meyveler = new Array("elma", "armut", "kiraz", "mandalina", "portakal");
+
+        console.log(meyveler);
+        meyveler.splice(2, 2) //2.indexten basla 2 elemani sil
+        console.log(meyveler);
+
+        for (var i in meyveler) {
+            document.write("<h3> meyve i:" +i+ "" + meyveler [i] +"<h3>")
+        }
+
+        document.write("<h3> listedeki ilk meyveye meyveler[0]: "+ meyveler[0] + "<h3>")
+
+        for (var meyve of meyveler) {
+            document.write("<h3>" + meyve.toUpperCase() + "<h3>")
+        }
+       
+
     </script>
-
-
-
 </body>
 </html>

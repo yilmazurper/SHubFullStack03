@@ -87,6 +87,8 @@
     <Content Include="javascriptEgitimi\Konu06StringMetotlari.html" />
     <Content Include="javascriptEgitimi\KOnu07olaylar.html" />
     <Content Include="javascriptEgitimi\Konu08Diziler.html" />
+    <Content Include="javascriptEgitimi\Konu09Seciciler.html" />
+    <Content Include="javascriptEgitimi\konu10JQuerySeciciler.html" />
     <Content Include="Resimler\Screenshot %282%29.png" />
     <Content Include="Stil.css" />
     <Content Include="Web.config" />
