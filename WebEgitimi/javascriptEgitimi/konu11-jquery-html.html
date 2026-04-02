@@ -1,0 +1,83 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>konu11-jquery-html</title>
+    <script src="../Scripts/jquery-3.7.1.min.js"></script>
+</head>
+<body>
+    <h1>konu11-jquery-html islemleri</h1>
+    <h2>metin icerigini degistirme</h2>
+    <p id="jqiledegistir" style="border:1px inset red"></p>
+    <p id="jqiledegistir" style="border:1px outset red"></p>
+    <script>
+        $(function () { //$(function() yapisida dokuman hazir oldugunda kodlari isletir
+            var secilecekEleman = $("#jqiledegistir")
+            secilecekEleman.text("degistir id li elemandan gelen icerik text metoduyla degistirildi") // uncaught referenceError :$ is not defined hatasi alirsak , sayfada jquery kutuphanesi yuklenmemistir
+
+            // element icerigini javascript ile degistirme
+            var secilecekEleman2 = document.getElementById("jsiledegistir")
+            secilecekEleman2.textContent = "bu elementin ici normal js ile degistirildi"
+        });
+
+    </script>
+    <hr />
+
+    <h2>metin ecerigini alma</h2>
+    <p id="jqileal">jq ile al</p>
+    <p id="jsileal">js ile al</p>
+    <h3 id="jqmetin"></h3>
+    <h3 id="jsmetin"></h3>
+    <script>
+        //elemnt icerigini jquery ile alma
+        var yazi = $("#jqileal").text()
+        $("#jqmetin").text(yazi) //jq ile elemente yazi yazma
+        //js ile metin alma
+        var metin = document.getElementById("jsileal").textContent
+        document.getElementById("jsmetin").textContent = metin
+    </script>
+
+    <hr />
+
+    <h2>elementlre html olarak ekleme</h2>
+    <div id="texticerik"></div>
+    <div id="htmlicerik"></div>
+    <div id="jstexticerik"></div>
+    <div id="jsinnertexticerik"></div>
+    <div id="jshtmltexticerik"></div>
+    <script>
+        // jquery ile 
+        $("texticerik").text("<h2>elementlre html olarak ekleme</h2>")
+        $("htmlicerik").html("<h2>elementlre html olarak ekleme</h2>")
+
+        // js ile
+        document.getElementById("jstexticerik").textContent ="<h2>elementlre html olarak ekleme</h2>"
+        document.getElementById("jsinnertexticerik").innerContent = "<h2>elementlre html olarak ekleme</h2>"
+        document.getElementById("jshtmlicerik").innerHTML = "<h2>elementlre html olarak ekleme</h2>"
+
+    </script>
+
+    <hr />
+
+    <h2>elemnterlin html iceriklerini alma</h2>
+    <h3>jquery ile alma</h3>
+    <div id="jqeryileal"></div>
+    <h3>javascript ile alma</h3>
+    <div id="javascriptileal"></div>
+    <script>
+        //jquery ile 
+        var icerik = $("#htmlicerik").html() // htmlicerik id li elemntin icindeki htmlyi al
+        $("#jqueryileal").html(icerik) //jqueryileal id elemente html oalrak ekle
+
+        //js ile
+
+        var content = document.getElementById("jshtmlicerik").innerHTML
+        document.getElementById("javascriptileal").innerHTML = content
+
+
+
+
+    </script>
+
+</body>
+</html>

@@ -28,6 +28,61 @@
         cdn sitelrinden alinan kod satirini sayfamiza ekleyerek hemen kullanabiliriz
     </p>
 
+    <p>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+        <script src=https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.7.1.js></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js" integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+        <script src="https://cdn.jsdelivr.net/npm/jquery@4.0.0/dist/jquery.min.js"></script>
+    <p>
+        <h3>nuget paket yonetici uzerinden yukleyebiliriz</h3>
+    </p>
+    
+    <br />eger vicual stidio ile uygulama gelistiriyorsak,
+    <br />
+    solution explorer > projeadi (sag tik) >manage nuget ....browse>query>install
+    </p>
+
+    <script src="../Scripts/jquery-3.7.1.min.js"></script>
+
+
+    <h2 id="baslik">html elemntlerini id ye gore secme</h2>
+    <p id="mesaj" style="border: 1px solid"></p>
+    <script>
+        //jquery kodalari $ ile yazilir
+        $(document).ready(function ()
+        {
+            // document.ready() metdodu sayfa yuklemsi tammalandiginda kodalrimizin calismasini saglar
+            // jquery secim islemlerinde css secicilerini kullanir
+            var secilecekEleman = $("#baslik") // id si baslik olan elemnti sec
+            var secilecekEleman2 = document.getElementById("baslik") // normak js ile id ye gore secim
+            $("#mesaj").text("basliktan gelen icerik : " + secilecekEleman[0].innerText)
+
+        })
+
+     
+    </script>
+
+
+     <hr />
+
+
+     <h2 id="etiket">html elemetlerini etiket adina (html taglarina) gore secme</h2>
+     <p id="etiketmesaj" style="border: 1px solid"></p>
+     <script>
+         var secilecekElemanlar = $("h2")
+         $("#etiketmesaj").text("basliktan gelen icerik :" + secilecekElemanlar[1].innerText)
+     </script>
+
+     <hr />
+
+     <h2 id="sinif" class="sinif">html elementlerini class adina gore secme</h2>
+     <p id="sinifmesaj" style="border: 1px solid blue"></p>
+     <script>
+         var secilecekElemanlar = $(".sinif")
+         $("sinifmeesaj").text("basliktan gelen icerik : " + secilecekElemanlar[0].innertext)
+     </script>
+
+
 
 </body>
 </html>
