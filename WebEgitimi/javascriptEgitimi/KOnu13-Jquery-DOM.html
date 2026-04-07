@@ -1,0 +1,128 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>KOnu13-Jquery-DOM</title>
+    <style>
+        .baslik {
+            color: red;
+            front-size: larger
+        }
+
+        .renk {
+            color: crimson
+        }
+
+        .brd {
+            border: 1px dashed blue;
+            min-height: 1rem;
+        }
+    </style>
+    <script src="../Scripts/jquery-3.7.1.min.js"></script>
+</head>
+<body>
+    <h1>KOnu13-Jquery-DOM</h1>
+    <h2>html input degerleini alma</h2>
+    <form>
+        <input type="text" id="metin" value="textbox icindeki deger" />
+        <hr />
+        <textarea name="urunAciklama" id="urunAciklama"></textarea>
+        <hr />
+        <input type="checkbox" name="checkbox1" id="checkbox1" />Onayliyorum
+        <hr />
+        <select id="dropdownlist">
+            <option value="elektronik">elektronik</option>
+            <option value="bilgisayar">bilgisayar</option>
+            <option value="telefon">telefon</option>
+        </select>
+        <hr />
+        <input type="radio" name="cinsiyet" value="Kadin" /> KAdin
+        <input type="radio" name="cinsiyet" value="erkek" />Erkek
+        <hr />
+        <a href="index,html" title="Anasayfa">Anasayfa</a>
+    </form>
+    <p id="sonuclar" claas="brd"></p>
+    <input type="button" id="button1" value="sonuclar" />
+    <input type="button" id="button2" value="attribute degerleri" />
+    <script>
+        $("#button1").click(function () {
+            // ekrandaki button1 id li elemnte tikladiginda
+            var degerler = "" 
+            degerler += "input degeri : " + $("#metin").val() // jquery val metotduyla veriye ulasiyoruz
+            degerler += "<hr>urun aciklma degeri : " + $("#urunaciklama").val()
+            degerler += "<hr>checkbox degeri : " + $("#checkbox1").val() //degeri
+            degerler += "<hr>checkbox degeri : " + $("#checkbox1").is('checked') //isaretlimi durum
+            degerler += "<hr>dropdownlist degeri : " + $("#dropdownlist").val() //
+            degerler += "<hr>cinciyet degeri : " + $("input              [name=cinsiyet ]:checked").val()
+            $("#sonuclar").html(degerler)
+        });
+
+        $("#button2").on("click", function () {
+            var degerler = ""
+            degerler += "<hr>Attribute href degeri : " + $("form a").attr("href")
+            degerler += "<hr>Attribute title degeri : " + $("form a").attr("title")
+            $("#sonuclar").html(degerler)
+
+
+
+        });
+
+    </script>
+
+    <hr />
+
+    <h2>jquery ile html elemntleri ekleme</h2>
+    <div id="eleman" class="brd">
+        append : secili elemanin sonuna <br />
+        prepend : secili elemanin basina <br />
+        after :secili elamanin sonrasina <br />
+        before : secili elamin oncesine elemnt eklememizi saglar
+    </div>
+    <input type="button" id="button3" value=" html elemntlerini ekle" />
+    <script>
+        $("#button3").on("click", function () {
+           $("#eleman").append("<h3 style='color:red'>append ile eklendi</h3>")
+           $("#eleman").prepend("<h3 style='color:red'>prependile eklendi</h3>")
+           $("#eleman").after("<h3 style='color:red'>after ile eklendi</h3>")
+           $("#eleman").before("<h3 style='color:red'>before ile eklendi</h3>")
+        });
+    </script>
+
+    <hr />
+
+    <h2>Jquery ile html elementleri kaldirma</h2>
+    <div id="silinicek">silinecek</div>
+    <input type="button" id="button4" value="html elementleri sil" />
+    <script>
+        $("#button4").on("click", function () {
+           //$("#silinecek").remove() //elamni sil
+            //$("#silinecek").empty() // icini temizle
+
+            document.getElementById("silinecek").remove() // js ile silme
+        });
+    </script>
+
+    <hr />
+    <h2>jquery ile html elemntleri gizleme/gosterme</h2>
+    <ul>
+        <li id=" anasayfalink">Anasayfa</li>
+        <li id=" hakkimizdalink">hakkimizda</li>
+        <li id=" urunlemizilink">urunlermiiz</li>
+        <li id=" iletisimlink">iletisim</li>
+    </ul>
+    <div id="anasayfa" class="brd">
+        anasayfa tab icerigi
+    </div>
+    <div id="hakkimizda" class="brd" style="display:none">
+        hakkimizda tab icerigi
+    </div>
+    <div id="urunlermiz" class="brd" style="display:none">
+        urunlermiz tab icerigi
+    </div>
+    <div id="iletisim" class="brd" style="display:none">
+        iletiism tab icerigi
+    </div>
+
+
+</body>
+</html>

@@ -27,6 +27,41 @@
     </script>
 
     <hr />
+    
+    <h2>elemntlerin css lerin degistirme</h2>
+
+    <div id=" jqsekillendir" class="renk test brd">
+        elemntlerin css lerini degitirme
+    </div>
+    <div id="jssekillendir" class="renk test brd">
+        elemenlerin CSS lerini degistirme
+    </div>
+    <script>
+        //jqery ile elemntlere css uygulama
+        $("#jqsekillendir").css("front-size","34px")
+        $("#jqsekillendir").css("padding", "34px")
+
+
+        //jquery ile elementlere claaa ekleme
+        $("h2:first").addClass("baslik")
+        $("#jqsekillendir").addClass("jsclass deneme") // birden fazla class da ekleyebiblrirz
+        $("#jqsekillendir").removeClass("renk")
+
+        //javascript ile css verme
+        document.getElementByid("jssekillendir").style.color = "blue"
+        document.getElementByid("jssekillendir").style.padding = "1rem"
+        document.getElementByid("jssekillendir").style.margin = "1.8rem"
+
+        //javascript ile elementlere class ekleme cikarma 
+        document.getElementById("jssekillendir").classlist.add("baslik")
+        document.getElementById("jssekillendir").classlist.remove("test")
+
+    </script>
+
+
+
+
+
 
 </body>
 </html>
