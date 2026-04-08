@@ -1,0 +1,7 @@
+h1>Konu15-jquery-ajax</h1>
+    <p>
+        AJAX, intenet sayfalrinda javascript ve XMLhttpRequest kullanimi ile etkilsimli uygiarlamlar olusturmaizi saglayan yonetimin adidir
+    </p>
+    <p>
+        AJAx uygulariminda hizkanmaya ve veri kallunmu azaltmaya yardimci olur
+    </p>
