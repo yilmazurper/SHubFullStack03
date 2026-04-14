@@ -70,6 +70,8 @@
     <Content Include="BootstrapEgitimi\ders01giris.html" />
     <Content Include="BootstrapEgitimi\ders02-satir-sutun-kullanimi.html" />
     <Content Include="BootstrapEgitimi\ders03hizalama.html" />
+    <Content Include="BootstrapEgitimi\ders04siralamaveittirme.html" />
+    <Content Include="BootstrapEgitimi\Ders05MarginPadding.html" />
     <Content Include="Content\bootstrap-grid.css" />
     <Content Include="Content\bootstrap-grid.min.css" />
     <Content Include="Content\bootstrap-grid.rtl.css" />
