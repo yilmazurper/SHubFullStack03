@@ -1,0 +1,147 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>Ders07FormElementleri</title>
+    <link href="../Content/bootstrap.min.css" rel="stylesheet" />
+</head>
+<body>
+    <main class="container">
+        <h1>Ders07FormElementleri</h1>
+        <form>
+            <table>
+                <tr>
+                    <td>
+                        <input type="text" value="" placeholder="kullanici Adi" />
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <input type="text" value="" placeholder="sifre" />
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <input type="submit" value="Giris" />
+                    </td>
+                </tr>
+            </table>
+        </form>
+
+        <h3>bootstrap uygulanmis hali</h3>
+
+        <form>
+            <table>
+                <tr>
+                    <td>
+                        <input type="text" value="" placeholder="kullanici Adi" class="form-control"/>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <input type="text" value="" placeholder="sifre" class="form-control" />
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <input type="submit" value="giris" class="btn btn-primary"/>
+                        <input type="submit" value="kayit" class="btn btn-secondary"/>
+                        <input type="submit" value="kayit sil" class="btn btn-danger"/>
+                        <input type="submit" value="uye bilgileri" class="btn btn-info"/>
+                        <input type="submit" value="bilgi guncelle" class="btn btn-success"/>
+                        <input type="submit" value="sifre yenile" class="btn btn-warning"/>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <input type="submit" value="giris" class="btn btn-outline-primary"/>
+                        <input type="submit" value="kayit" class="btn btn-outline-secondary"/>
+                        <input type="submit" value="kayit sil" class="btn btn-outline-danger"/>
+                        <input type="submit" value="uye bilgileri" class="btn btn-outline-info"/>
+                        <input type="submit" value="bilgi guncelle" class="btn btn-outline-success"/>
+                        <input type="submit" value="sifre yenile" class="btn btn-outline-warning"/>
+                    </td>
+                </tr>
+            </table>
+        </form>
+        <h3>A elementinde buton classi kullanimi</h3>
+        <a href="#">Giris</a>
+        <a href="#" class="btn btn-primary">Giris</a>
+        <a href="#" class="btn btn-outline-primary">Giris</a>
+
+
+        <h3>urun kayit</h3>
+        <form>
+            <table class="w-50" border="1">
+                <tr>
+                    <select class="form-check select">
+                        <option value="-1">seciniz</option>
+                        <option value="1">Elektronik</option>
+                        <option value="2">Bilgisayar</option>
+                        <option value="3">telefon</option>
+                    </select>
+
+                </tr>
+                <tr>
+                    <td>Urun Adi</td>
+                    <td>
+                        <input type="text" name="txturunadi" value="" placeholder="urun Adi" class="form-control" />
+                    </td>
+
+                </tr>
+                <tr>
+                    <td>urun aciklmasi</td>
+                    <td>
+                        <textarea class="form-control"></textarea>
+                    </td>
+
+                </tr>
+                <tr>
+                    <td>urun resmi</td>
+                    <td>
+                        <input type="file" name="urunresmi" class="form-control" />
+                    </td>
+                </tr>
+                <tr>
+                    <td>urun stok</td>
+                    <td>
+                        <input type="checkbox" name="cbDurum" class="form-check-input" />
+                        <label for=" cbdurum" class="form-check-label">Aktif</label>
+                    </td>
+                </tr>
+                <tr>
+                    <td>urun rengi</td>
+                    <td>
+                        <input type="color" name="cRenk" class="form-control" />
+                    </td>
+
+                </tr>
+                <tr>
+                    <td>urun uretim tarihi</td>
+                    <td>
+                        <input type="date" name="dtTarih" value="form-control" />
+                    </td>
+
+                </tr>
+                <tr>
+                    <td>Ana Ayfa</td>
+                    <td>
+                        <input type="radio" name="rbAnayfa" class="form-check-input"/>
+                        <label for="rbAnasayfa" class="form-check-label">Goster</label>
+                        <input type="radio" name="rbAnayfa" class="form-check-input"/>
+                        <label for="rbAnayfa" class="form-check-label" >gosterme</Label>
+
+                    </td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td>< <input type="submit" value="kaydet" class="btn brn-primary" /></td>
+                </tr>
+
+
+            </table>
+        </form>
+
+    </main>
+</body>
+</html>
