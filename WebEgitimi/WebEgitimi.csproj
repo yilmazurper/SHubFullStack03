@@ -77,6 +77,8 @@
     <Content Include="BootstrapEgitimi\Ders08Alerts.html" />
     <Content Include="BootstrapEgitimi\Ders09RenkClasslari.html" />
     <Content Include="BootstrapEgitimi\Ders10Listeler.html" />
+    <Content Include="BootstrapEgitimi\Ders11TableClass.html" />
+    <Content Include="BootstrapEgitimi\ders12kompenentler.html" />
     <Content Include="Content\bootstrap-grid.css" />
     <Content Include="Content\bootstrap-grid.min.css" />
     <Content Include="Content\bootstrap-grid.rtl.css" />
@@ -123,6 +125,9 @@
     <Content Include="javascriptEgitimi\Konu15-jquery-ajax.html" />
     <Content Include="javascriptEgitimi\KOnu16-javascript-dunyasi.html" />
     <Content Include="Resimler\BitCoin.png" />
+    <Content Include="Resimler\pirate-hook-pirate-hook-illustration-7YLTbkEK_t.jpg" />
+    <Content Include="Resimler\pngtree-tower-crane-png-image_6124632 %281%29.png" />
+    <Content Include="Resimler\pngtree-tower-crane-png-image_6124632.png" />
     <Content Include="Resimler\Screenshot %282%29.png" />
     <Content Include="Scripts\bootstrap.bundle.js" />
     <Content Include="Scripts\bootstrap.bundle.min.js" />
