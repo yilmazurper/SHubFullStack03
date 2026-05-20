@@ -79,6 +79,7 @@
     <Content Include="BootstrapEgitimi\Ders10Listeler.html" />
     <Content Include="BootstrapEgitimi\Ders11TableClass.html" />
     <Content Include="BootstrapEgitimi\ders12kompenentler.html" />
+    <Content Include="BootstrapEgitimi\Ders13OrnekTasarim.html" />
     <Content Include="Content\bootstrap-grid.css" />
     <Content Include="Content\bootstrap-grid.min.css" />
     <Content Include="Content\bootstrap-grid.rtl.css" />
