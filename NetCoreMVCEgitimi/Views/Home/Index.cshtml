@@ -1,0 +1,41 @@
+﻿@{
+    ViewData["Title"] = "Ana Sayfa";
+}
+
+<div class="text-center">
+    <h1 class="display-4">
+        MVC Nedir? MVC'nin calisma Prensibi Nasildir?
+        </h1>
+    <p>
+        mvc, yazilim muhendisliginde onemli bir yere sahip arcitectctural pattern (yazilim mimari desenleri) 'in bir parcasidir. model , view ve vontroller kelimelerinin bas harflarinden olusan mvc(model-view-controller), 1979 yilinda Tygve Reeskaug tarafindan olusturulmus ve yazilim gelismede bir cok proijede kullanilmisitr. 10aralik 2007 'de microsoft'un MVC desene Asp.net teknolojisi ile birlestirmesi ile popularitesi daha da arttirmistir.
+    </p>
+
+    <p>
+        MVC deseni , 3 katmandan olusmaktadir ve katmanlari birbirinden bagimsiz (birbirni etkilemeden) olarak calismaktadir. bu sebbele cogunlukla buyuk capli projlerde projelerin yonetiminn ve kontrolunun daha rahat saglanabilmesi icin tercih edilmektedir. MVC ile gelistirilen projelerde projenin detaylarina gore bir cok kisi es zamanli olarak kolaylila calisabilmektedir.
+
+    </p>
+
+    <h2>model nedir</h2>
+    <p>
+        model , mvc'de projenin is mantiginin (busniess logic) olusturuldugu bolumdur.is mantigiyle berber dogrulama (validation) ve veri erisim (data acces)islemleri de bu bolumde gerceklestirilmektedir
+        <br />
+
+        model tek katmandan olusabilecegi gibi kendi icinde birden fazla katmandan da olusabbilir. ic yapilandirma projenin buyuklugu ile yazilim gelistiricinin planlanmasina kalmis bir durumdur .
+        eger projede buyuk capli ise modeli birden cok katmana ayirark prohenin yonetimi acisindan faydali olacaktir.
+    </p>
+
+    <h2>
+        view nedir?
+    </h2>
+    <p>
+        View , MVC 'de projenin arayuzlerinin olusturuldugu bolumdur. bu bolumde projhenin kullanicilara sunulacak olan HTML dosyalari yer almaktadir . projnin gelisitildigi yazilim dillerine gore dosya uzantilari de degisbilmektedir.projhenlerin buyuklugune gore dikkat edilmesi gereken bir nokta ise , klasorlemedir.
+    </p>
+
+    <h2>Controller Nedir?</h2>
+    <p>
+        Controller, MVC de projenin ic sureclerini kontol eden bolumdur. bu bolumde view ile model arasindaki baglanti kurulur. kullanicilardan gelen istekler (ruquest) controller'larda degerlendirilir, istegin detayina gore hangi islemlrin yapilacagi ve kullaniciya hangi view'in donecegi (response) belirtilir
+
+
+    </p>
+
+</div>
