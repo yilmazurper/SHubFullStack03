@@ -1,0 +1,62 @@
+﻿
+@{
+    ViewBag.Title = "MVC03 Data Transfer" ; 
+}
+
+<h2>MCV03 data Transfer</h2>
+
+<h3>
+    @ViewBag.UrunKategorisi Urunleri 
+</h3>
+
+<table class="table">
+    <tr>
+        <th>Urun Adi</th>
+        <th>Fiyati</th>
+        <th>Stok</th>
+    </tr>
+    @foreach (var item in ViewBag.Urunler)
+    {
+    <tr>
+            <td>@item.Adi</td>
+            <td>@item.Fiyati</td>
+            <td>@item.Stok</td>
+    </tr>
+    }
+    <caption>@TempData["UrunBilgi" ]</caption>
+</table>
+
+<hr />
+
+
+<table class="table table-striped">
+    <tr>
+        <th>Urun Adi</th>
+        <th>Fiyati</th>
+        <th>Stok</th>
+    </tr>
+    @foreach (var item in ViewData["Urunler"] as List<Urun>)
+    {
+        <tr>
+            <td>@item.Adi</td>
+            <td>@item.Fiyati</td>
+            <td>@item.Stok</td>
+        </tr>
+    }
+    <caption>@TempData["UrunBilgi"]</caption>
+</table>
+
+<hr />
+
+<h2>MVC de view dan controller a veri gonderme</h2>
+
+<h3>
+    1-get metoduyla veri gonderme
+</h3>
+
+<form action ="/MVC03DataTransfer/Search" method="get">
+    <input type="text" name="txtarea" value="" placeholder="Ara" />
+
+</form>
+
+
