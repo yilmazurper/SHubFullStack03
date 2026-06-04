@@ -55,8 +55,109 @@
 </h3>
 
 <form action ="/MVC03DataTransfer/Search" method="get">
-    <input type="text" name="txtarea" value="" placeholder="Ara" />
+    <input type="text" name="txtAra" value="" placeholder="Ara" />
 
 </form>
 
+<p>
+    bir formun metodunu get yapip calistirisak , form icindeki veriler Querystring denilne yondtemle tarayici cubugu uzerinden sunucuya gonderilir
+    <hr />
 
+    veriyi View'dan GET metoduyla gondermissek , contollerda da GET metoduyla yaklabiilriz 
+
+
+</p>
+
+<h3>
+
+    2-post metoduyla veri gonderme
+
+</h3>
+
+@{
+    var kategoriler = new List<SelectListItem>
+    {
+        new SelectListItem() { Text = "bilgisayar", Value = "1"},
+        new SelectListItem() { Text = "monitor" },
+        new SelectListItem() { Text = "telefon", Value = "3" },
+        new SelectListItem() { Text = "TV", Value = "1" },
+        new SelectListItem() { Text = "tablet", Value = "5" },
+    };
+}
+
+<form action ="" method="post">
+
+    <table class="table">
+        <tr>
+            <td>Urun Adi</td>
+            <td>@Html.TextBox("txtUrunAdi")</td>
+        </tr>
+        <tr>
+            <td>Kategori</td>
+            <td>@Html.DropDownList("ddlKategori" , kategoriler)</td>
+        </tr>
+        <tr>
+            <td>Sozlesme</td>
+            <td>
+                <label>
+                    @Html.RadioButton("rbOnay" , "onay") kabul ediyorum 
+                </label>
+                <label>
+                    @Html.RadioButton("rbOnay", "red") kabul etmiyorum
+                </label>
+            </td>
+        </tr>
+        <tr>
+            <td>Durum</td>
+            <td>@Html.CheckBox("cbOnay")<label for="cbOnay">Aktif</label></td>
+            
+        </tr>
+        <tr>
+            <td></td>
+            <td><input type="submit" value="gonder"/></td>
+        </tr>
+
+
+
+
+
+    </table>
+
+</form>
+
+<hr />
+
+<div class="alert alert-info">
+ <h4>@ViewBag.Baslik</h4>
+ @ViewBag.Mesaj1
+ <hr />
+ @ViewBag.Mesaj2
+ <hr />
+ @ViewBag.Mesaj3
+</div>
+
+<hr />
+
+<div class="alert alert-info">
+ <h4>@ViewBag.Baslik</h4>
+ @ViewBag.Mesaj4
+ <hr />
+ @ViewBag.Mesaj5
+ <hr />
+ @ViewBag.Mesaj6
+
+</div>
+
+<hr />
+
+<div class="alert alert-info">
+ <h4>@ViewBag.Baslik</h4>
+ @ViewBag.Mesaj7
+ <hr />
+ @ViewBag.Mesaj8
+ <hr />
+ @ViewBag.Mesaj9
+
+</div>
+
+<hr />
