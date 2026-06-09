@@ -1,0 +1,46 @@
+﻿@model Adres
+@{
+    ViewBag.Title = "Adres Detay";
+}
+<h2>Adres Detay</h2>
+
+<table class="table">
+    <tr>
+        <td>Sehir</td>
+        <td>@Model.Sehir</td>
+    </tr>
+    <tr>
+        <td>Ilce</td>
+        <td>@Model.Ilce</td>
+    </tr>
+    <tr>
+        <td>Acik Adres </td>
+        <td>@Model.AcikAdres</td>
+    </tr>
+</table>
+
+<h3>Adres Duzenle</h3>
+
+@using (Html.BeginForm())
+{
+    <table class="table">
+        <tr>
+            <td>Sehir</td>
+            <td>@Html.EditorFor(m => m.Sehir)</td>
+        </tr>
+        <tr>
+            <td>Ilce</td>
+            <td>@Html.EditorFor(m => m.Ilce)</td>
+        </tr>
+        <tr>
+           <td>Acik Adres</td>
+            <td>@Html.TextAreaFor(m => m.AcikAdres)</td>
+        </tr>
+        <tr>
+           <td></td>
+            <td>
+            <input type="submit" value="Kaydet"  class="btn btn-outline-success"/>
+            </td>
+        </tr>
+    </table>
+}

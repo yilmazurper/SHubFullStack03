@@ -1,0 +1,46 @@
+﻿@model UyeSayfasiViewModel
+@{
+    ViewBag.Title = "Kullanici Detay";
+}
+<h2>Kullanici Detay</h2>
+
+<table class="table">
+    <tr>
+        <td>Ad</td>
+        <td>@Model.Kullanici.Ad</td>
+    </tr>
+    <tr>
+        <td>Soyad</td>
+        <td>@Model.Kullanici.Soyad</td>
+    </tr>
+    <tr>
+        <td>Email</td>
+        <td>@Model.Kullanici.Email</td>
+    </tr>
+    <tr>
+        <td>Kullanici Adi</td>
+        <td>@Model.Kullanici.KullaniciAdi</td>
+    </tr>
+    <tr>
+        <td>Sifre</td>
+        <td>@Model.Kullanici.Sifre</td>
+    </tr>
+
+</table>
+
+<h2>Adres Bilgisi</h2>
+
+<table class="table">
+    <tr>
+        <td>Sehir</td>
+        <td>@Model.Adres.Sehir</td>
+    </tr>
+    <tr>
+        <td>Ilce</td>
+        <td>@Model.Adres.Ilce</td>
+    </tr>
+    <tr>
+        <td>Acik Adres </td>
+        <td>@Model.Adres.AcikAdres</td>
+    </tr>
+</table>

@@ -21,6 +21,7 @@ namespace NetCoreMVCEgitimi.Controllers
 
 
             };
+            return View(kullanici); ////kullanici nesnesini bu sekilde sayfaya model verisi olarak gonderiypruz ve yoksa hata veriyor
 
         }
 
@@ -36,5 +37,35 @@ namespace NetCoreMVCEgitimi.Controllers
             var model = new Adres() { Ilce = "kartal", Sehir = "istnabul", AcikAdres = "gul sk. no:18 Atalar" };
             return View(model);
         }
+        [HttpPost] // post olunca calis
+        public ActionResult AdresDetay(Adres adres)
+        {
+            // islemler yapilir 
+            return View(adres);
+        }
+
+        public IActionResult KullaniciAdresDetay()
+        {
+            var kullanici = new Kullanici()
+            {
+                Ad = "murat",
+                Soyad = "Yilmaz",
+                Email = "murat@yilmaz.co",
+                KullaniciAdi = "murat",
+                Sifre = "123",
+
+
+            };
+            var model = new UyeSayfasiViewModel
+            {
+                Kullanici = kullanici,
+                Adres = new Adres() { Ilce = "kartal", Sehir = "istanbul", AcikAdres = "gul sk. no:18 Atalar" }
+
+            };
+
+            return View(model); 
+
+        }
+
     }
 }
