@@ -8,6 +8,7 @@ namespace NetCoreMVCEgitimi
 
             // Add services to the container.
             builder.Services.AddControllersWithViews(); //uygulamada MVC controller view yapisnizi kullanacagiz
+            builder.Services.AddDbContext<Models.UyeContext>(); // uygulamada Dbcontext yapisini kullanacagiz
 
             var app = builder.Build(); // calisacak olan uygulama ornegi
 

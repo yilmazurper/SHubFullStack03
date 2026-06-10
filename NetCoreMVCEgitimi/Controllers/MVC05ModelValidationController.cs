@@ -17,11 +17,16 @@ namespace NetCoreMVCEgitimi.Controllers
         [HttpPost]
         public IActionResult YeniUye(Uye uye)
         {
-            if (true)
+            if (ModelState.IsValid) // eger modeldeki kurallara uyulmusa
             {
-
+                // kayit ekle
             }
-            return View();
+            else
+
+            {
+                ModelState.AddModelError(" ", "zorunlu Alanlari Doldurunuz!"); // modeldeki kullaraa uyulmssa hata mesaji ekle
+            }
+            return View(uye);
         }
     }
 }
