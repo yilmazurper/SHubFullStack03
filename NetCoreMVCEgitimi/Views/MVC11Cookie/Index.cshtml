@@ -1,0 +1,29 @@
+﻿
+@{
+    ViewBag.Title = "MVC Cookie (cerez) Kullanimi ";
+}
+
+
+<h2>MVC cookie (cerez) kullanimi</h2>
+
+<p>
+    cerezler kullanicinin cihazinda saklnan kucuk verilerdir
+    <br />
+    guvenlik gerektiren veriler burada kullnak sakincalidir
+    <br />
+    kullaniciya tanimlamak ve sonraki girisinde taniyabilmek icin kullanilir
+</p>
+
+<h3>Cookie Olustur</h3> 
+
+<form action="/MVC11Cookie/CookieOlustur" mthod="post">
+    <input type="text" name="kullaniciAdi" placeholder="kullanici Adi" required />
+    <input type="password" name="sifre" placeholder="sifre" required />
+    <input type="submit" value="giris" />
+</form>
+
+<br />
+
+@Html.Raw(TempData["mesaj"])
+
+<a href="/MVC11Cookie/Cookieoku">Cookie Oku</a>
