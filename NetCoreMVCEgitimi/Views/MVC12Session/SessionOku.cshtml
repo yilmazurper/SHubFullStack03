@@ -1,0 +1,26 @@
+﻿
+@{
+    ViewBag.Title = "Session Oku"; 
+}
+
+<h2>Session Oku</h2>
+
+<h3>Session daki kullanici adi</h3>
+
+<h5>Frontend: @Context.Session.GetString("username")</h5>
+
+<h5>backend: @TempData["kullaniciAdi"]</h5>
+
+<hr />
+
+<h3>Session daki kullanici Guid</h3>
+
+<h5>Frontend: @Context.Session.GetString("userguid")</h5>
+
+<h5>backend: @TempData["kullaniciguid"]</h5>
+
+<a href="SessionSil">Session Sil</a>
+
+<hr />
+
+

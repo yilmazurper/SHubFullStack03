@@ -1,0 +1,73 @@
+﻿
+@{
+    ViewBag.Title = "MVC String Format";
+    var tarih = DateTime.Now;
+}
+
+<h2>MVC String Format</h2>
+
+<p>
+    String Format: Ekrandaki verileri bicimlendirmek icin kullanilir.
+</p>
+
+<h3>
+    Musteri No: @ViewBag.MusteriNo
+</h3>
+<h3>
+    Satici No: @ViewBag.SaticiNo
+</h3>
+
+<hr />
+
+<h3>
+    Tarih Formatlama
+</h3>
+
+<h4>
+    @tarih
+</h4>
+
+<h4>
+    Kisa Saat t : @string.Format("{0:t}" , tarih)
+</h4>
+
+<hr />
+
+<h4>
+    Kisa Tarih d : @string.Format("{0:d}" , tarih)
+</h4>
+
+<hr />
+
+<h4>
+    Yil yyyy t : @string.Format("{0:yyyy}" , tarih)
+</h4>
+
+<h3>
+    Sayi Formatlama
+</h3>
+
+C 49.90 : @string.Format("{0:C}" , 49.90)
+
+<hr />
+
+D3 18 : @string.Format("{0:D3}" ,18 )
+
+<hr />
+
+D5 18 : @string.Format("{0:D5}" , 18)
+
+<hr />
+
+F1 15.84 : @string.Format("{0:F1}", 15.84 )
+
+<hr />
+
+F2 15.9: @string.Format("{0:F2}" , 15.9)
+
+<hr />
+
+F3 15.84 : @string.Format("{0:F3}" , 15.84)
+
+<hr />
+

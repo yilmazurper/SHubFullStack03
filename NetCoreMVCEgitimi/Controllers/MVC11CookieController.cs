@@ -30,9 +30,34 @@ namespace NetCoreMVCEgitimi.Controllers
             }
             else
             {
-                TempData["Mesaj"] = @"<div class='alert alert-danger'> Giris BASarisiz!</div>";
+                TempData["Mesaj"] = @"<div class='alert alert-danger'> Giris Basarisiz!</div>";
             }
+            return View("Index");
+        }
+        public IActionResult CookieOKu()
+        {
+            if (HttpContext.Request.Cookies["username"] == null || HttpContext.Request.Cookies["userguid"] == null)
+            {
+                TempData["Mesaj"] = @"<div class='alert alert-danger'>Lutfen Giris Yapiniz!</div>";
+                return RedirectToAction("Index");
+            }
+
+            TempData["kullaniciAdi"] = HttpContext.Request.Cookies["username"];
+            TempData["kullaniciguid"] = HttpContext.Request.Cookies["userguid"];
             return View();
+        }
+
+        public IActionResult CookieSil()
+        {
+            if (HttpContext.Request.Cookies["username"] !=null)
+            {
+                HttpContext.Response.Cookies.Delete("username");
+            }
+            if (HttpContext.Request.Cookies["userguid"] !=null)
+            {
+                HttpContext.Response.Cookies.Delete("userguid");
+            }
+            return RedirectToAction("CookieOku");
         }
     }
 }
