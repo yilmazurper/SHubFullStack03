@@ -1,3 +1,4 @@
+using Microsoft.AspNetCore.Authentication.Cookies; // cerez tabnali kimlik dogrulma icin gerekli namespace
 namespace NetCoreMVCEgitimi
 {
     public class Program
@@ -10,6 +11,14 @@ namespace NetCoreMVCEgitimi
             builder.Services.AddControllersWithViews(); //uygulamada MVC controller view yapisnizi kullanacagiz
             builder.Services.AddDbContext<Models.UyeContext>(); // uygulamada Dbcontext yapisini kullanacagiz
             builder.Services.AddSession();// uuygulamada session kullanimi aktif et
+
+            builder.Services.AddAuthentication(CookieAuthenticationDefaults.AuthenticationScheme) // cerez tabnali kimlik kimlik dogtulama kullanicimizii belirtiyoruz
+            .AddCookie(Options =>
+             {
+                 Options.LoginPath = "/MVC15FiltersUsing/Login"; //kullannici login degilse
+                 Options.LogoutPath = "/MVC15FiltersUsing/Logout"; // kullanici logout oldugunda
+                 Options.AccessDeniedPath = "/MVC15FiltersUsing/AccessDenied"; //kullannici yetkisiz bir erismeye calisirsa yonlendirelecek sayfa
+             });
 
             var app = builder.Build(); // calisacak olan uygulama ornegi
 
