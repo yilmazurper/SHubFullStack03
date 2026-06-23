@@ -12,3 +12,89 @@
 <h3>
     Controller RouteData Values
 </h3>
+
+<p>
+    @Html.Raw(TempData["mesaj"])
+</p>
+
+<form action="" method="get">
+    @Html.Editor("kelime")
+</form>
+
+<h4>Post</h4>
+<form action="" method="post">
+    @Html.Editor("kelime")
+</form>
+
+
+<h5>Controller Adi : </h5>
+@ViewContext.RouteData.Values["controller"]
+
+<h5>Action Adi : </h5>
+@ViewContext.RouteData.Values["action"]
+
+<h5>Id Degeri : </h5>
+@ViewContext.RouteData.Values["Id"]
+
+<h5>Request Method : </h5>
+@Context.Request.Method
+
+<h5>Request Scheme : </h5>
+@Context.Request.Scheme
+
+<h5>QueryString : </h5>
+@Context.Request.QueryString
+
+<h5>Query kelime : </h5>
+@Context.Request.Query["kelime"]
+
+<h5>Session degeri : </h5>
+@Context.Session.GetString("Userguide")
+
+<h5>cookie degeri  : </h5>
+@(Context.Request.Cookies["userguid"] !=null)
+
+@if (Context.Request.Cookies["userguide"] !=null)
+{
+    @Context.Request.Cookies["userguid"]
+}
+
+<h5>Oturum Acilmis mi </h5>
+@Context.User.Identity.IsAuthenticated
+
+<h5>KUllanici user rolune sahip mi : </h5>
+@Context.User.IsInRole("user")
+
+<h5>context Session Id</h5>
+@Context .Sesion.Id
+
+<hr />
+
+<h3>Extra Metotlar</h3>
+
+<p>
+    Controller Adi :
+    @Context.GetRouteValue("controller")
+    <br />Action Adi:
+    @Context.GetRouteValue("Action")
+    <br />Id Degeri :
+    @Context.GetRouteValue("id")
+
+
+
+
+
+</p>
+
+
+
+
+
+
+
+
+
+
+
+
+

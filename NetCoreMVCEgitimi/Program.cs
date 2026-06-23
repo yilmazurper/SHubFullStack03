@@ -1,4 +1,4 @@
-using Microsoft.AspNetCore.Authentication.Cookies; // cerez tabnali kimlik dogrulma icin gerekli namespace
+using Microsoft.AspNetCore.Authentication.Cookies; // cerez tabanli kimlik dogrulma icin gerekli namespace
 namespace NetCoreMVCEgitimi
 {
     public class Program
@@ -38,6 +38,14 @@ namespace NetCoreMVCEgitimi
             app.UseSession(); // uygulamda aktif et
 
             app.MapStaticAssets(); // uygulamada static dosyalar( wwwroot icerisindekiler) kullanabilsin
+
+            //area kullanabilmek icin asagidaki kodu yazdik
+            app.MapControllerRoute(
+                name: "areas",
+                pattern: "{ares=exist}/{controller=Main}/{action=Index}/{id?}")
+                .WithStaticAssets();
+
+
             app.MapControllerRoute(
                 name: "default",
                 pattern: "{controller=Home}/{action=Index}/{id?}")
