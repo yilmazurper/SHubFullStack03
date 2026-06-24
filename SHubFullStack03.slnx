@@ -1,4 +1,5 @@
 <Solution>
+  <Project Path="AspNetCoreWebAPI/AspNetCoreWebAPI.csproj" Id="2a540c9c-19cd-46d1-8b19-51bbb05757d3" />
   <Project Path="Konu02TipDonusumleri/Konu02TipDonusumleri.csproj" Id="7e2be047-1bed-4183-b374-16b2538e4096" />
   <Project Path="konu03operatorler/konu03operatorler.csproj" Id="de961d9f-7645-4c5b-9722-e4132a6d5b20" />
   <Project Path="Konu04KararYapilari/Konu04KararYapilari.csproj" Id="590bed62-4a9d-41e0-9f7b-a7f546dc298f" />

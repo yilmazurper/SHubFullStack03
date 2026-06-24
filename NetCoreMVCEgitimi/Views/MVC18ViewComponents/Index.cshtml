@@ -1,0 +1,70 @@
+﻿
+@{
+    ViewBag["Title"] = "View Component Kullanimi";
+}
+
+
+<h2>View Component Kullanimi</h2>
+
+<p>
+    Asp.net de her hangi bir controller a bagli olmadan kendi calisabilen modeuler yapilara view component denir 
+
+</p>
+
+<h3>
+    Kullanimi
+</h3>
+
+<p>
+    projeye ViewComponents klasoru ekleyip icerisine classimizi ekleyip ViewComponent sinifindan miras aliyoruz
+
+</p>
+
+<p>
+
+    /View/MVC18ViewComponents/Components/Uyeler/Default.cshtml
+    <br />
+    /View/Shared/Components/Uyeler/Default.cshtml
+    <br />
+    yukaridaki konumlarda birine ilgili bir sayfayi olusturuyoruz
+
+</p>
+
+
+<h3>
+    Komponenti CAgirma
+</h3>
+
+<p>
+    <code>await ile Component.InvokeAsync("Uyeler")</code> metodunu cagirip parametre olarak calistiracagimiz komponent ismini gonderiyourz
+</p>
+
+@await Component.InvokeAsync("Uyeler")
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

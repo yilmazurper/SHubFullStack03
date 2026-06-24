@@ -2,12 +2,10 @@
 
 namespace NetCoreMVCEgitimi.Areas.ApiKullanimi.Controllers
 {
-    [Area("ApiKullanimi")]
-    public class MainController : Controller
+    public class HomeController : Controller
     {
         public IActionResult Index()
         {
-
             return View();
         }
     }
